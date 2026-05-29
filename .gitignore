@@ -1,0 +1,16 @@
+# Claude Code local settings
+.claude/
+
+# Internal design notes (not for public repo)
+design.md
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Logs & temp
+*.log
+*.tmp

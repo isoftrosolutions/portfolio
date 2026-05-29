@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block nothing public; keep source/working files out of crawl
+Disallow: /.claude/
+Disallow: /design.md
+
+Sitemap: https://isoftro.com/sitemap.xml
