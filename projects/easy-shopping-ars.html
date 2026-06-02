@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy Shopping ARS — eCommerce Platform | iSoftro Solutions</title>
+  <meta name="description" content="A full-featured online shopping platform in Nepal offering electronics, fashion, home appliances, secure payment gateways (eSewa, Khalti), and more." />
+  <meta name="theme-color" content="#0B1E3D" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://isoftro.com/projects/easy-shopping-ars.html" />
+  <meta property="og:url" content="https://isoftro.com/projects/easy-shopping-ars.html" />
+  <meta property="og:site_name" content="iSoftro Solutions" />
+  <meta property="og:title" content="Easy Shopping ARS — eCommerce Platform" />
+  <meta property="og:description" content="A full-featured online shopping platform in Nepal with eSewa, Khalti payments, product catalog, cart, checkout, user accounts, and admin dashboard." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://isoftro.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Easy Shopping ARS — eCommerce Platform by iSoftro Solutions" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Easy Shopping ARS — eCommerce Platform | iSoftro Solutions" />
+  <meta name="twitter:description" content="A full-featured online shopping platform in Nepal with eSewa, Khalti payments, and more." />
+  <meta name="twitter:image" content="https://isoftro.com/assets/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Easy Shopping ARS",
+    "applicationCategory": "eCommerce platform",
+    "operatingSystem": "Web, Android, iOS",
+    "url": "https://easyshoppingars.com",
+    "description": "A full-featured online shopping platform in Nepal offering electronics, fashion, home appliances and more, with secure payment gateways including eSewa and Khalti.",
+    "creator": { "@type": "Organization", "name": "iSoftro Solutions", "url": "https://isoftro.com/" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green:     { DEFAULT: '#1DB954', dark: '#18A348' },
+            navy:      '#0B1E3D',
+            ink:       '#0F172A',
+            softgrey:  '#F1F5F9',
+            midgrey:   '#64748B',
+            bordergrey:'#E2E8F0',
+            signal:    '#2563EB',
+            teal:      '#0EA5E9',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'Segoe UI', '-apple-system', 'sans-serif'],
+          },
+          borderRadius: { card: '12px' },
+          boxShadow: {
+            e1: '0 1px 3px rgba(0,0,0,0.08)',
+            e2: '0 4px 16px rgba(0,0,0,0.10)',
+            e3: '0 8px 32px rgba(0,0,0,0.12)',
+            e4: '0 16px 48px rgba(0,0,0,0.18)',
+            glow: '0 4px 20px rgba(29,185,84,0.30)',
+          },
+          transitionTimingFunction: {
+            standard: 'cubic-bezier(0.4,0,0.2,1)',
+            out: 'cubic-bezier(0,0,0.2,1)',
+          },
+          keyframes: {
+            pulseGlow: { '0%,100%': { boxShadow: '0 4px 12px rgba(29,185,84,0.30)' }, '50%': { boxShadow: '0 4px 28px rgba(29,185,84,0.55)' } },
+            floaty:    { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+          },
+          animation: {
+            pulseGlow: 'pulseGlow 2s ease-in-out infinite',
+            floaty: 'floaty 6s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { font-family: 'Poppins', 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #0F172A; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .4s cubic-bezier(0,0,.2,1), transform .4s cubic-bezier(0,0,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+      .animate-pulseGlow, .animate-floaty { animation: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased selection:bg-green/20">
+
+  <a href="#project-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-card focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2 focus:ring-2 focus:ring-green">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-40 border-b border-bordergrey bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-4 md:px-12">
+      <a href="../index.html" class="flex items-center" aria-label="iSoftro Solutions — home">
+        <img src="../assets/isoftro-logo.png" alt="iSoftro Solutions" class="h-10 w-auto sm:h-11 md:h-12" width="124" height="48" />
+      </a>
+      <a href="../index.html#portfolio" class="inline-flex items-center gap-1.5 rounded-lg border border-bordergrey px-4 py-2 text-[13px] font-semibold text-ink/70 transition-colors duration-200 hover:bg-softgrey hover:text-green">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Portfolio
+      </a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="bg-gradient-to-br from-green/15 via-white to-teal/15">
+    <div class="mx-auto max-w-[1200px] px-5 py-12 md:px-12 md:py-16">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <span class="grid h-20 w-20 place-items-center rounded-2xl bg-white p-3 shadow-e2 mx-auto">
+          <img src="../assets/portfolio/ars.jpg" alt="Easy Shopping ARS logo" class="max-h-14 w-auto rounded-lg object-contain" loading="lazy" />
+        </span>
+        <span class="mt-6 inline-block rounded-full bg-navy/90 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-wide text-white">eCommerce</span>
+        <h1 class="mt-4 text-[clamp(2rem,4.5vw,2.75rem)] font-extrabold uppercase leading-[1.1] text-ink">Easy Shopping ARS <br class="hidden sm:block" /><span class="text-green">eCommerce Platform</span></h1>
+        <p class="mt-1 text-[14px] font-medium text-midgrey">Client: ARS eCommerce &middot; Nepal</p>
+        <p class="mt-4 max-w-2xl mx-auto text-[16px] leading-[1.65] text-midgrey">
+          A full-featured online shopping platform in Nepal offering electronics, fashion, home appliances, secure payment gateways (eSewa, Khalti), product catalog, cart, checkout, user accounts, order management, and admin dashboard.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a href="https://easyshoppingars.com" target="_blank" rel="noopener" class="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-green px-6 py-3 text-[14px] font-semibold uppercase tracking-wide text-white shadow-glow transition-colors duration-200 hover:bg-green-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Visit Live Site
+          </a>
+          <a href="https://github.com/isoftrosolutions/ars-ecommerce" target="_blank" rel="noopener" class="group inline-flex cursor-pointer items-center gap-2 rounded-full border border-bordergrey px-6 py-3 text-[14px] font-semibold text-ink transition-colors duration-200 hover:bg-softgrey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Source Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="bg-softgrey">
+    <div class="mx-auto max-w-[1200px] px-5 py-10 md:px-12">
+      <div class="reveal flex flex-wrap items-center justify-center gap-3">
+        <span class="text-[13px] font-semibold uppercase tracking-[0.08em] text-midgrey">Tech Stack:</span>
+        <span class="inline-flex items-center rounded-full bg-green/10 px-4 py-1.5 text-[13px] font-semibold text-green-dark">PHP &amp; MySQL</span>
+        <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-midgrey shadow-e1">eSewa</span>
+        <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-midgrey shadow-e1">Khalti</span>
+        <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-midgrey shadow-e1">REST API</span>
+        <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-midgrey shadow-e1">Push Notifications</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTENT ============ -->
+  <article id="project-content" class="bg-white">
+    <div class="mx-auto max-w-[860px] px-5 py-12 md:px-12 md:py-16">
+
+      <div class="reveal">
+        <h2 class="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold uppercase leading-[1.2] text-ink">About This Project</h2>
+        <p class="mt-4 text-[16px] leading-[1.7] text-midgrey">
+          Easy Shopping ARS is a complete eCommerce platform built for the Nepali market. It provides a seamless online shopping experience across electronics, fashion, home appliances, and more. The platform integrates local payment gateways including eSewa and Khalti for fast, trusted checkout.
+        </p>
+        <p class="mt-4 text-[16px] leading-[1.7] text-midgrey">
+          Built on a robust PHP &amp; MySQL backend with a RESTful API architecture, the platform handles product catalog management, cart operations, secure checkout flows, user account management, order tracking, and an admin dashboard for store operations. Push notifications keep customers engaged with order updates and promotional offers.
+        </p>
+      </div>
+
+      <div class="reveal mt-10">
+        <h2 class="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold uppercase leading-[1.2] text-ink">Key Features</h2>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+          <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-softgrey p-4">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-green/10 text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="text-[14px] font-semibold text-ink">Product Catalog</p><p class="text-[13px] text-midgrey">Organized categories, search, and filtering</p></div>
+          </div>
+          <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-softgrey p-4">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-green/10 text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="text-[14px] font-semibold text-ink">Shopping Cart &amp; Checkout</p><p class="text-[13px] text-midgrey">Smooth cart with quantity management</p></div>
+          </div>
+          <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-softgrey p-4">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-green/10 text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="text-[14px] font-semibold text-ink">eSewa &amp; Khalti Payments</p><p class="text-[13px] text-midgrey">Secure local payment gateway integration</p></div>
+          </div>
+          <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-softgrey p-4">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-green/10 text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="text-[14px] font-semibold text-ink">User Accounts &amp; Orders</p><p class="text-[13px] text-midgrey">Profiles, order history, and tracking</p></div>
+          </div>
+          <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-softgrey p-4">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-green/10 text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="text-[14px] font-semibold text-ink">Admin Dashboard</p><p class="text-[13px] text-midgrey">Manage products, orders, and customers</p></div>
+          </div>
+          <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-softgrey p-4">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-green/10 text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="text-[14px] font-semibold text-ink">Push Notifications</p><p class="text-[13px] text-midgrey">Order updates and promotional offers</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal mt-10 rounded-card border border-bordergrey bg-softgrey p-6">
+        <h2 class="text-[16px] font-bold text-ink">Project Links</h2>
+        <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+          <a href="https://easyshoppingars.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg bg-green px-5 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-green-dark">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Visit Live Site
+          </a>
+          <a href="https://github.com/isoftrosolutions/ars-ecommerce" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg border border-bordergrey bg-white px-5 py-3 text-[14px] font-semibold text-ink transition-colors hover:bg-softgrey">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View Source Code
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy">
+    <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 border-t border-white/10 px-5 py-8 md:flex-row md:px-12">
+      <div class="flex flex-col items-center gap-2 md:items-start">
+        <a href="../index.html" class="inline-flex rounded-card bg-white px-4 py-2.5 shadow-e1" aria-label="iSoftro Solutions — home">
+          <img src="../assets/isoftro-logo-full.png" alt="iSoftro Solutions — Software Solutions" class="h-12 w-auto" width="123" height="48" />
+        </a>
+        <p class="text-[13px] text-white/50">&copy; <span id="year"></span> iSoftro Solutions. Built for Nepali businesses.</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-[13px] text-white/70 md:items-end">
+        <a href="tel:+9779811144402" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977 9811144402</a>
+        <a href="mailto:isoftrosolutions@gmail.com" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> isoftrosolutions@gmail.com</a>
+        <div class="mt-1 flex items-center gap-5 text-white/50">
+          <a href="../index.html#portfolio" class="transition-colors duration-200 hover:text-green">Portfolio</a>
+          <a href="../index.html#pricing" class="transition-colors duration-200 hover:text-green">Pricing</a>
+          <a href="../index.html#faq" class="transition-colors duration-200 hover:text-green">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    }
+  </script>
+
+</body>
+</html>

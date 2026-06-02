@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News Portal — iSoftro Solutions Portfolio</title>
+  <meta name="description" content="A dynamic news portal built with PHP and MySQL featuring categorized news articles, search, admin content management, and responsive design for readers across Nepal." />
+  <meta name="theme-color" content="#0B1E3D" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://isoftro.com/projects/news-portal.html" />
+  <meta property="og:url" content="https://isoftro.com/projects/news-portal.html" />
+  <meta property="og:site_name" content="iSoftro Solutions" />
+  <meta property="og:title" content="News Portal — iSoftro Solutions" />
+  <meta property="og:description" content="A dynamic news portal with categorized articles, search, admin content management, and responsive design." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://isoftro.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="News Portal by iSoftro Solutions" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="News Portal — iSoftro Solutions" />
+  <meta name="twitter:description" content="A dynamic news portal with categorized articles, search, admin management." />
+  <meta name="twitter:image" content="https://isoftro.com/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green:     { DEFAULT: '#1DB954', dark: '#18A348' },
+            navy:      '#0B1E3D',
+            ink:       '#0F172A',
+            softgrey:  '#F1F5F9',
+            midgrey:   '#64748B',
+            bordergrey:'#E2E8F0',
+            signal:    '#2563EB',
+            teal:      '#0EA5E9',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'Segoe UI', '-apple-system', 'sans-serif'],
+          },
+          borderRadius: { card: '12px' },
+          boxShadow: {
+            e1: '0 1px 3px rgba(0,0,0,0.08)',
+            e2: '0 4px 16px rgba(0,0,0,0.10)',
+            e3: '0 8px 32px rgba(0,0,0,0.12)',
+            e4: '0 16px 48px rgba(0,0,0,0.18)',
+            glow: '0 4px 20px rgba(29,185,84,0.30)',
+          },
+          transitionTimingFunction: {
+            standard: 'cubic-bezier(0.4,0,0.2,1)',
+            out: 'cubic-bezier(0,0,0.2,1)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { font-family: 'Poppins', 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #0F172A; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .4s cubic-bezier(0,0,.2,1), transform .4s cubic-bezier(0,0,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased selection:bg-green/20">
+
+  <a href="#hero" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-card focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2 focus:ring-2 focus:ring-green">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-40 border-b border-bordergrey bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-4 md:px-12">
+      <a href="../index.html" class="flex items-center" aria-label="iSoftro Solutions — home">
+        <img src="../assets/isoftro-logo.png" alt="iSoftro Solutions" class="h-10 w-auto sm:h-11 md:h-12" width="124" height="48" />
+      </a>
+      <a href="../index.html#portfolio" class="inline-flex items-center gap-2 text-[14px] font-semibold text-midgrey transition-colors duration-200 hover:text-green">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Portfolio
+      </a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="relative overflow-hidden bg-gradient-to-br from-teal/15 via-white to-green/15">
+      <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-8 px-5 py-12 text-center md:px-12 md:py-16">
+        <div class="grid h-24 w-24 place-items-center rounded-2xl bg-white p-4 shadow-e3">
+          <img src="../assets/portfolio/news.png" alt="News Portal" class="max-h-16 w-auto object-contain" />
+        </div>
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 rounded-full bg-navy/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.08em] text-navy">
+            <span class="h-2 w-2 rounded-full bg-green"></span> Publishing
+          </span>
+          <h1 class="mt-5 text-[clamp(2rem,5vw,2.75rem)] font-extrabold uppercase leading-[1.1] text-ink">News Portal</h1>
+          <p class="mt-4 text-[16px] leading-[1.6] text-midgrey">A dynamic news portal built with PHP and MySQL featuring categorized news articles, search, admin content management, and responsive design for readers across Nepal.</p>
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[14px] text-midgrey">
+            <span class="font-medium text-ink">Client:</span> iSoftro Solutions
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Project Overview</h2>
+        <p class="mt-4 text-[15px] leading-[1.7] text-midgrey">The News Portal is a fully-functional content publishing platform designed for digital newsrooms. It enables editors to publish, categorize, and manage news articles through an intuitive admin panel, while readers enjoy a fast, responsive frontend optimized for both desktop and mobile consumption.</p>
+        <p class="mt-3 text-[15px] leading-[1.7] text-midgrey">Built with a clean separation between the admin backend and public-facing interface, the system supports multi-category news management, full-text search, and an article publishing workflow that includes image management and SEO-friendly URL structures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="bg-softgrey">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Features</h2>
+      </div>
+      <div class="reveal mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h8M4 18h12"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Category Management</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Organize news into hierarchical categories. Manage multiple sections such as politics, sports, technology, entertainment, and more.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Article Publishing</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Rich article editor with title, content, featured image, author attribution, publish/draft status, and scheduled publishing.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Search</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Full-text search across all articles with keyword matching, category filtering, and sorted results by date or relevance.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Admin Dashboard</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Centralized admin panel for managing articles, categories, users, and site settings. Includes analytics and moderation tools.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Responsive Design</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Mobile-first responsive layout that adapts seamlessly across phones, tablets, and desktops for an optimal reading experience.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">SEO-Friendly URLs</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Clean, human-readable article URLs optimized for search engines with customizable URL slugs and meta tag support.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Tech Stack</h2>
+      </div>
+      <div class="reveal mt-6 flex flex-wrap gap-3">
+        <span class="inline-flex items-center rounded-full bg-green/10 px-4 py-2 text-[13px] font-semibold text-green-dark">PHP &amp; MySQL</span>
+        <span class="inline-flex items-center rounded-full bg-softgrey px-4 py-2 text-[13px] font-medium text-midgrey">JavaScript</span>
+        <span class="inline-flex items-center rounded-full bg-softgrey px-4 py-2 text-[13px] font-medium text-midgrey">CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LINKS ============ -->
+  <section class="bg-softgrey">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Links</h2>
+      </div>
+      <div class="reveal mt-6 flex flex-wrap gap-3">
+        <a href="https://github.com/isoftrosolutions/Newsportal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-navy/80">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.01-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.81 1.3 3.5.99.11-.77.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.82 1.1.82 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="bg-navy">
+    <div class="mx-auto max-w-[900px] px-5 py-14 text-center md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-white">Looking for a News Platform?</h2>
+        <p class="mt-3 text-[15px] text-white/70">We can build a custom news portal tailored to your publishing needs.</p>
+        <a href="https://wa.me/9779811144402?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20News%20Portal." target="_blank" rel="noopener" class="group mt-6 inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-full bg-green px-7 py-3.5 text-[15px] font-semibold uppercase tracking-wide text-white shadow-glow transition-colors duration-200 hover:bg-green-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
+          Get in Touch
+          <span class="grid h-5 w-5 place-items-center rounded-full bg-white/20"><svg class="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy">
+    <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 border-t border-white/10 px-5 py-8 md:flex-row md:px-12">
+      <div class="flex flex-col items-center gap-2 md:items-start">
+        <a href="../index.html" class="inline-flex rounded-card bg-white px-4 py-2.5 shadow-e1" aria-label="iSoftro Solutions — home">
+          <img src="../assets/isoftro-logo-full.png" alt="iSoftro Solutions" class="h-12 w-auto" width="123" height="48" />
+        </a>
+        <p class="text-[13px] text-white/50">&copy; <span id="year"></span> iSoftro Solutions. Built for Nepali businesses.</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-[13px] text-white/70 md:items-end">
+        <a href="tel:+9779811144402" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977 9811144402</a>
+        <a href="mailto:isoftrosolutions@gmail.com" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> isoftrosolutions@gmail.com</a>
+        <div class="mt-1 flex items-center gap-5 text-white/50">
+          <a href="../index.html" class="transition-colors duration-200 hover:text-green">Home</a>
+          <a href="../index.html#portfolio" class="transition-colors duration-200 hover:text-green">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>

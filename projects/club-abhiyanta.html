@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club Abhiyanta-BIT — Student Club Portal — iSoftro Solutions Portfolio</title>
+  <meta name="description" content="A full-featured PHP/MySQL club management system for Club Abhiyanta-BIT, a student tech club at BIT College. Features a modern Tailwind CSS frontend and custom admin panel." />
+  <meta name="theme-color" content="#0B1E3D" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://isoftro.com/projects/club-abhiyanta.html" />
+  <meta property="og:url" content="https://isoftro.com/projects/club-abhiyanta.html" />
+  <meta property="og:site_name" content="iSoftro Solutions" />
+  <meta property="og:title" content="Club Abhiyanta-BIT — Student Club Portal — iSoftro Solutions" />
+  <meta property="og:description" content="A full-featured PHP/MySQL club management system for Club Abhiyanta-BIT with Tailwind CSS frontend and custom admin panel." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://isoftro.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Club Abhiyanta-BIT Portal by iSoftro Solutions" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Club Abhiyanta-BIT — Student Club Portal — iSoftro Solutions" />
+  <meta name="twitter:description" content="Club management system for Club Abhiyanta-BIT with Tailwind CSS frontend." />
+  <meta name="twitter:image" content="https://isoftro.com/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green:     { DEFAULT: '#1DB954', dark: '#18A348' },
+            navy:      '#0B1E3D',
+            ink:       '#0F172A',
+            softgrey:  '#F1F5F9',
+            midgrey:   '#64748B',
+            bordergrey:'#E2E8F0',
+            signal:    '#2563EB',
+            teal:      '#0EA5E9',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'Segoe UI', '-apple-system', 'sans-serif'],
+          },
+          borderRadius: { card: '12px' },
+          boxShadow: {
+            e1: '0 1px 3px rgba(0,0,0,0.08)',
+            e2: '0 4px 16px rgba(0,0,0,0.10)',
+            e3: '0 8px 32px rgba(0,0,0,0.12)',
+            e4: '0 16px 48px rgba(0,0,0,0.18)',
+            glow: '0 4px 20px rgba(29,185,84,0.30)',
+          },
+          transitionTimingFunction: {
+            standard: 'cubic-bezier(0.4,0,0.2,1)',
+            out: 'cubic-bezier(0,0,0.2,1)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { font-family: 'Poppins', 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #0F172A; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .4s cubic-bezier(0,0,.2,1), transform .4s cubic-bezier(0,0,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased selection:bg-green/20">
+
+  <a href="#hero" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-card focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2 focus:ring-2 focus:ring-green">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-40 border-b border-bordergrey bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-4 md:px-12">
+      <a href="../index.html" class="flex items-center" aria-label="iSoftro Solutions — home">
+        <img src="../assets/isoftro-logo.png" alt="iSoftro Solutions" class="h-10 w-auto sm:h-11 md:h-12" width="124" height="48" />
+      </a>
+      <a href="../index.html#portfolio" class="inline-flex items-center gap-2 text-[14px] font-semibold text-midgrey transition-colors duration-200 hover:text-green">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Portfolio
+      </a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="relative overflow-hidden bg-gradient-to-br from-green/15 via-white to-amber/15">
+      <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-8 px-5 py-12 text-center md:px-12 md:py-16">
+        <div class="grid h-24 w-24 place-items-center rounded-2xl bg-white p-4 shadow-e3">
+          <img src="../assets/portfolio/club.png" alt="Club Abhiyanta-BIT" class="max-h-16 w-auto object-contain" />
+        </div>
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 rounded-full bg-navy/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.08em] text-navy">
+            <span class="h-2 w-2 rounded-full bg-green"></span> Community
+          </span>
+          <h1 class="mt-5 text-[clamp(2rem,5vw,2.75rem)] font-extrabold uppercase leading-[1.1] text-ink">Club Abhiyanta-BIT<br /><span class="text-green">Student Club Portal</span></h1>
+          <p class="mt-4 text-[16px] leading-[1.6] text-midgrey">A full-featured PHP/MySQL club management system for Club Abhiyanta-BIT, a student tech club at BIT College. Features a modern Tailwind CSS frontend and custom admin panel.</p>
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[14px] text-midgrey">
+            <span class="font-medium text-ink">Client:</span> Club Abhiyanta-BIT (BIT College)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Project Overview</h2>
+        <p class="mt-4 text-[15px] leading-[1.7] text-midgrey">Club Abhiyanta-BIT is the official student tech club of BIT College. This portal serves as the club's digital presence, providing public pages for showcasing activities, programmes, and projects, alongside a member dashboard and a comprehensive admin panel for managing every aspect of the club's online presence.</p>
+        <p class="mt-3 text-[15px] leading-[1.7] text-midgrey">The system is fully database-driven via MySQL, with a Tailwind CSS frontend that delivers a clean, modern experience. The admin panel allows club coordinators to dynamically update hero sections, colors, calls-to-action, gallery images, team members, social links, site statistics, and other site settings without touching any code.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTIONS ============ -->
+  <section class="bg-softgrey">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Sections</h2>
+      </div>
+      <div class="reveal mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Home</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Dynamic hero section with customizable backgrounds, taglines, and CTAs managed through the admin panel.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">About</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Club mission, vision, history, and advisor information. Content is fully editable through the admin panel.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Contact</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Contact form, email, phone, and social media links. Submissions stored in the database for follow-up.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Gallery</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Photo gallery showcasing club events, workshops, and activities. Images managed through the admin panel with upload support.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Programmes</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Detailed listing of club programmes, workshops, and training sessions with dates, descriptions, and registration links.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Projects</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Showcase of student projects developed under the club. Includes project title, description, tech stack, and team members.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Team</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Club members and executive committee listing with photos, roles, and social profiles. Managed through the admin panel.</p>
+        </article>
+        <article class="rounded-card border border-bordergrey bg-white p-6 shadow-e2 transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-e3">
+          <span class="grid h-11 w-11 place-items-center rounded-[10px] bg-green/10 text-green"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></span>
+          <h3 class="mt-3 text-[16px] font-semibold text-ink">Membership</h3>
+          <p class="mt-1 text-[13px] leading-[1.6] text-midgrey">Online membership registration with form submission, approval workflow, and member directory for registered members.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT STRUCTURE ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Project Structure</h2>
+      </div>
+      <div class="reveal mt-6 overflow-x-auto">
+        <pre class="rounded-card border border-bordergrey bg-softgrey p-5 text-[13px] leading-[1.6] text-midgrey"><code>club-bit/
+├── admin/                 # Admin panel
+│   ├── css/
+│   ├── js/
+│   ├── manage_hero.php    # Hero section management
+│   ├── manage_colors.php  # Color scheme settings
+│   ├── manage_cta.php     # Call-to-action management
+│   ├── manage_gallery.php # Gallery image management
+│   ├── manage_members.php # Team member management
+│   ├── manage_social.php  # Social links management
+│   ├── manage_stats.php   # Site statistics
+│   └── settings.php       # General site settings
+├── assets/                # Static assets
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── includes/              # PHP includes
+│   ├── config.php         # Database configuration
+│   ├── header.php
+│   └── footer.php
+├── member/                # Member dashboard
+├── index.php              # Public homepage
+├── about.php
+├── contact.php
+├── gallery.php
+├── programmes.php
+├── projects.php
+├── team.php
+└── membership.php</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADMIN FEATURES ============ -->
+  <section class="bg-softgrey">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Admin Panel Capabilities</h2>
+      </div>
+      <div class="reveal mt-6 grid gap-3 sm:grid-cols-2">
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Manage hero content and backgrounds</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Customize color scheme and branding</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Edit call-to-action sections</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Upload and manage gallery images</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Manage team members and roles</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Update social media links</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">Configure site statistics counters</span>
+        </div>
+        <div class="flex items-start gap-3 rounded-card border border-bordergrey bg-white p-4 shadow-e1">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-[14px] text-ink">General site settings and configuration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Tech Stack</h2>
+      </div>
+      <div class="reveal mt-6 flex flex-wrap gap-3">
+        <span class="inline-flex items-center rounded-full bg-green/10 px-4 py-2 text-[13px] font-semibold text-green-dark">PHP &amp; MySQL</span>
+        <span class="inline-flex items-center rounded-full bg-softgrey px-4 py-2 text-[13px] font-medium text-midgrey">Tailwind CSS</span>
+        <span class="inline-flex items-center rounded-full bg-softgrey px-4 py-2 text-[13px] font-medium text-midgrey">JavaScript</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LINKS ============ -->
+  <section class="bg-softgrey">
+    <div class="mx-auto max-w-[900px] px-5 py-14 md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-ink">Links</h2>
+      </div>
+      <div class="reveal mt-6 flex flex-wrap gap-3">
+        <a href="https://github.com/isoftrosolutions/club-bit" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-navy/80">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.01-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.81 1.3 3.5.99.11-.77.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.82 1.1.82 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="bg-navy">
+    <div class="mx-auto max-w-[900px] px-5 py-14 text-center md:px-12 md:py-16">
+      <div class="reveal">
+        <h2 class="text-[clamp(1.4rem,3vw,1.7rem)] font-bold uppercase leading-[1.2] text-white">Need a Club or Community Portal?</h2>
+        <p class="mt-3 text-[15px] text-white/70">We can build a similar platform for your organization or student club.</p>
+        <a href="https://wa.me/9779811144402?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Club%20Portal." target="_blank" rel="noopener" class="group mt-6 inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-full bg-green px-7 py-3.5 text-[15px] font-semibold uppercase tracking-wide text-white shadow-glow transition-colors duration-200 hover:bg-green-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
+          Get in Touch
+          <span class="grid h-5 w-5 place-items-center rounded-full bg-white/20"><svg class="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy">
+    <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 border-t border-white/10 px-5 py-8 md:flex-row md:px-12">
+      <div class="flex flex-col items-center gap-2 md:items-start">
+        <a href="../index.html" class="inline-flex rounded-card bg-white px-4 py-2.5 shadow-e1" aria-label="iSoftro Solutions — home">
+          <img src="../assets/isoftro-logo-full.png" alt="iSoftro Solutions" class="h-12 w-auto" width="123" height="48" />
+        </a>
+        <p class="text-[13px] text-white/50">&copy; <span id="year"></span> iSoftro Solutions. Built for Nepali businesses.</p>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-[13px] text-white/70 md:items-end">
+        <a href="tel:+9779811144402" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +977 9811144402</a>
+        <a href="mailto:isoftrosolutions@gmail.com" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-green"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> isoftrosolutions@gmail.com</a>
+        <div class="mt-1 flex items-center gap-5 text-white/50">
+          <a href="../index.html" class="transition-colors duration-200 hover:text-green">Home</a>
+          <a href="../index.html#portfolio" class="transition-colors duration-200 hover:text-green">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>
