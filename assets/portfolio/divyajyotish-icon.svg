@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5A1A1A"/>
+      <stop offset="100%" stop-color="#3A0A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)" rx="128"/>
+  <circle cx="512" cy="512" r="400" fill="none" stroke="#D4A535" stroke-width="12"/>
+  <circle cx="512" cy="512" r="320" fill="none" stroke="#D4A535" stroke-width="6" opacity="0.6"/>
+  <circle cx="512" cy="512" r="240" fill="none" stroke="#D4A535" stroke-width="4" opacity="0.4"/>
+  <line x1="512" y1="112" x2="512" y2="912" stroke="#D4A535" stroke-width="3" opacity="0.3"/>
+  <line x1="112" y1="512" x2="912" y2="512" stroke="#D4A535" stroke-width="3" opacity="0.3"/>
+  <polygon points="512,200 620,380 780,420 680,570 720,750 512,660 304,750 344,570 244,420 404,380" fill="none" stroke="#D4A535" stroke-width="6" opacity="0.5"/>
+  <text x="512" y="580" text-anchor="middle" font-size="160" fill="#D4A535" font-family="serif" font-weight="bold">ॐ</text>
+</svg>
