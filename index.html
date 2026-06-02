@@ -107,6 +107,17 @@
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .faq-icon { transform: rotate(45deg); }
+    .marquee-wrap { overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent); mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent); }
+    .marquee-track { display:flex; gap:16px; width:max-content; animation:marqueeScroll 35s linear infinite; }
+    .marquee-wrap:hover .marquee-track { animation-play-state:paused; }
+    @keyframes marqueeScroll { to { transform:translateX(-50%); } }
+    .marquee-chip { display:flex; align-items:center; justify-content:center; padding:14px 26px; border-radius:14px; background:#f4f7fb; border:1px solid rgba(255,255,255,.3); box-shadow:0 1px 3px rgba(0,0,0,.08); transition:transform .2s,box-shadow .2s; flex-shrink:0; }
+    .marquee-chip:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.12); }
+    .marquee-chip img { height:40px; width:auto; object-fit:contain; display:block; }
+    @media (prefers-reduced-motion:reduce) {
+      .marquee-track { animation:none; flex-wrap:wrap; justify-content:center; width:100%; gap:12px; }
+      .marquee-wrap { -webkit-mask-image:none; mask-image:none; }
+    }
   </style>
 </head>
 
@@ -482,13 +493,21 @@
       <!-- trusted-by logo strip -->
       <div class="reveal mt-12">
         <p class="text-center text-[12px] font-semibold uppercase tracking-[0.12em] text-white/50">More products from our studio</p>
-        <div class="mx-auto mt-6 grid max-w-4xl grid-cols-3 items-center gap-4 sm:grid-cols-6">
-          <span class="flex h-14 items-center justify-center rounded-card bg-white/95 px-4"><img src="assets/portfolio/leadmind.svg" alt="LeadMindAI" class="max-h-8 w-auto object-contain" loading="lazy" /></span>
-          <span class="flex h-14 items-center justify-center rounded-card bg-white/95 px-4"><img src="assets/portfolio/codex.png" alt="Nepal ERP (Codex)" class="max-h-8 w-auto object-contain" loading="lazy" /></span>
-          <span class="flex h-14 items-center justify-center rounded-card bg-white/95 px-4"><img src="assets/portfolio/school.png" alt="School Management System" class="max-h-8 w-auto object-contain" loading="lazy" /></span>
-          <span class="flex h-14 items-center justify-center rounded-card bg-white/95 px-4"><img src="assets/portfolio/bit.png" alt="BIT College Library" class="max-h-8 w-auto object-contain" loading="lazy" /></span>
-          <span class="flex h-14 items-center justify-center rounded-card bg-white/95 px-4"><img src="assets/portfolio/news.png" alt="News Portal" class="max-h-8 w-auto object-contain" loading="lazy" /></span>
-          <span class="flex h-14 items-center justify-center rounded-card bg-white/95 px-4"><img src="assets/portfolio/club.png" alt="Club Abhiyanta-BIT" class="max-h-8 w-auto object-contain" loading="lazy" /></span>
+        <div class="marquee-wrap mx-auto mt-6 max-w-full">
+          <div class="marquee-track">
+            <span class="marquee-chip"><img src="assets/portfolio/leadmind.svg" alt="LeadMindAI" loading="lazy" /></span>
+            <span class="marquee-chip"><img src="assets/portfolio/codex.png" alt="Nepal ERP (Codex)" loading="lazy" /></span>
+            <span class="marquee-chip"><img src="assets/portfolio/school.png" alt="School Management System" loading="lazy" /></span>
+            <span class="marquee-chip"><img src="assets/portfolio/bit.png" alt="BIT College Library" loading="lazy" /></span>
+            <span class="marquee-chip"><img src="assets/portfolio/news.png" alt="News Portal" loading="lazy" /></span>
+            <span class="marquee-chip"><img src="assets/portfolio/club.png" alt="Club Abhiyanta-BIT" loading="lazy" /></span>
+            <span class="marquee-chip" aria-hidden="true"><img src="assets/portfolio/leadmind.svg" alt="" loading="lazy" /></span>
+            <span class="marquee-chip" aria-hidden="true"><img src="assets/portfolio/codex.png" alt="" loading="lazy" /></span>
+            <span class="marquee-chip" aria-hidden="true"><img src="assets/portfolio/school.png" alt="" loading="lazy" /></span>
+            <span class="marquee-chip" aria-hidden="true"><img src="assets/portfolio/bit.png" alt="" loading="lazy" /></span>
+            <span class="marquee-chip" aria-hidden="true"><img src="assets/portfolio/news.png" alt="" loading="lazy" /></span>
+            <span class="marquee-chip" aria-hidden="true"><img src="assets/portfolio/club.png" alt="" loading="lazy" /></span>
+          </div>
         </div>
       </div>
 
