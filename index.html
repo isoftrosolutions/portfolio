@@ -611,12 +611,12 @@
       <div class="reveal mt-10">
         <div class="mx-auto flex max-w-lg items-center justify-center gap-8 rounded-card border border-bordergrey bg-softgrey px-8 py-5">
           <div class="text-center">
-            <p class="text-[24px] font-extrabold text-green">50+</p>
+            <p class="text-[24px] font-extrabold text-green"><span class="counter" data-target="50">0</span><span>+</span></p>
             <p class="text-[12px] text-midgrey">Projects Delivered</p>
           </div>
           <div class="h-10 w-px bg-bordergrey"></div>
           <div class="text-center">
-            <p class="text-[24px] font-extrabold text-green">100+</p>
+            <p class="text-[24px] font-extrabold text-green"><span class="counter" data-target="100">0</span><span>+</span></p>
             <p class="text-[12px] text-midgrey">Happy Clients</p>
           </div>
         </div>
@@ -840,6 +840,28 @@
       document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
     } else {
       document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    }
+    // Counter animation
+    if (!prefersReduced) {
+      const counterIo = new IntersectionObserver((entries, obs) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          obs.unobserve(e.target);
+          const el = e.target;
+          const target = parseInt(el.dataset.target, 10);
+          const duration = 1800;
+          const start = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            el.textContent = Math.floor(p * target);
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.counter').forEach((el) => counterIo.observe(el));
+    } else {
+      document.querySelectorAll('.counter').forEach((el) => { el.textContent = el.dataset.target; });
     }
   </script>
 </body>
