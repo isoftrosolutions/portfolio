@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI/UX & Product Design | iSoftro Solutions</title>
+  <meta name="description" content="iSoftro Solutions designs product planning, wireframes, high-fidelity interfaces, dashboards, and conversion-optimized flows for websites and apps." />
+  <meta name="theme-color" content="#0B1E3D" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://isoftro.com/ui-ux-product-design.html" />
+  <meta property="og:url" content="https://isoftro.com/ui-ux-product-design.html" />
+  <meta property="og:site_name" content="iSoftro Solutions" />
+  <meta property="og:title" content="UI/UX & Product Design — Interfaces That Users Love | iSoftro" />
+  <meta property="og:description" content="Product planning, wireframes, high-fidelity interfaces, dashboards, and conversion-optimized flows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://isoftro.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UI/UX & Product Design | iSoftro Solutions" />
+  <meta name="twitter:description" content="Product planning, wireframes, high-fidelity interfaces, dashboards, and conversion-optimized flows." />
+  <meta name="twitter:image" content="https://isoftro.com/assets/og-image.png" />
+
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "UI/UX & Product Design",
+    "provider": { "@type": "Organization", "name": "iSoftro Solutions", "url": "https://isoftro.com/" },
+    "description": "Product planning, wireframes, high-fidelity interfaces, dashboards, and conversion-optimized flows."
+  }]
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: { DEFAULT: '#1DB954', dark: '#18A348' },
+            navy: '#0B1E3D',
+            ink: '#0F172A',
+            softgrey: '#F1F5F9',
+            midgrey: '#64748B',
+            bordergrey: '#E2E8F0',
+            signal: '#2563EB',
+            teal: '#0EA5E9'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'Segoe UI', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            e1: '0 1px 3px rgba(0,0,0,0.08)',
+            e2: '0 4px 16px rgba(0,0,0,0.10)',
+            e3: '0 8px 32px rgba(0,0,0,0.12)',
+            e4: '0 16px 48px rgba(0,0,0,0.18)',
+            glow: '0 4px 20px rgba(29,185,84,0.30)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { font-family: 'Poppins', 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #0F172A; }
+    body { overflow-x: hidden; }
+    .glass { background: rgba(255,255,255,.78); border: 1px solid rgba(226,232,240,.8); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(29,185,84,.18), transparent 32%),
+        radial-gradient(circle at 15% 70%, rgba(14,165,233,.15), transparent 30%);
+      background-size: 72px 72px, 72px 72px, auto, auto;
+    }
+    .text-gradient { background: linear-gradient(135deg, #1DB954, #0EA5E9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .orb { position:absolute; border-radius:9999px; filter: blur(80px); pointer-events:none; }
+    .section-label { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(29,185,84,.22); background:rgba(29,185,84,.07); color:#1DB954; padding:.42rem .9rem; border-radius:9999px; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .feature-card { transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 12px 34px rgba(15,23,42,.12); border-color: rgba(29,185,84,.36); }
+    .step-card { transition: transform .24s ease, box-shadow .24s ease; }
+    .step-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(15,23,42,.10); }
+    .icon-box { display:grid; place-items:center; width:48px; height:48px; border-radius:14px; background:rgba(29,185,84,.1); color:#1DB954; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-white text-ink antialiased selection:bg-green/20">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2 focus:ring-2 focus:ring-green">Skip to content</a>
+
+  <header class="fixed left-0 right-0 top-0 z-50">
+    <div class="mx-auto max-w-[1240px] px-4 pt-4">
+      <nav class="glass flex items-center justify-between rounded-2xl px-4 py-3 shadow-e2 md:px-6">
+        <a href="index.php" class="flex items-center" aria-label="iSoftro Solutions home">
+          <img src="assets/isoftro-logo.png" alt="iSoftro Solutions" class="h-10 w-auto" />
+        </a>
+        <div class="hidden items-center gap-1 text-[13px] font-semibold text-ink/70 lg:flex">
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="ecommerce-app.php" class="hidden rounded-full border border-green/30 px-4 py-2 text-[13px] font-semibold text-green transition hover:bg-green/5 sm:inline-flex">Ecommerce App</a>
+          <a href="index.php#contact" class="inline-flex items-center gap-2 rounded-full bg-green px-5 py-2.5 text-[13px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+            Start a Project
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <button id="menuToggle" class="grid h-10 w-10 place-items-center rounded-xl border border-bordergrey bg-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="glass mt-2 hidden rounded-2xl p-3 text-[15px] font-semibold text-ink/75 lg:hidden">
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="ecommerce-app.php">Ecommerce App</a>
+          <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-grid relative isolate overflow-hidden bg-navy pt-32 text-white md:pt-40">
+      <div class="orb -right-32 top-12 h-96 w-96 bg-green/20"></div>
+      <div class="orb -left-32 bottom-12 h-80 w-80 bg-teal/20"></div>
+      <div class="mx-auto max-w-[1240px] px-5 pb-24 pt-10 md:px-8 md:pb-32 md:pt-16">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 rounded-full border border-green/30 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-[.14em] text-green">
+            <i data-lucide="pen-tool" class="h-4 w-4"></i>
+            UI/UX & Product Design
+          </div>
+          <h1 class="mt-6 text-[clamp(2.55rem,6vw,5.35rem)] font-black uppercase leading-[.96] tracking-tight">UI/UX &amp; Product Design <span class="text-gradient">— Interfaces That Users Love</span></h1>
+          <p class="mx-auto mt-6 max-w-3xl text-[17px] leading-8 text-white/72 md:text-[19px]">Product planning, wireframes, high-fidelity interfaces, dashboards, and conversion-optimized flows.</p>
+          <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="index.php#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-green px-7 py-4 text-[15px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+              Design your product
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <a href="index.php#brands" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[15px] font-bold text-white transition hover:bg-white/10">
+              View portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-bordergrey bg-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">What We Design</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Pixel-Perfect Design For Every Screen</h2>
+          <p class="mt-4 text-[16px] leading-7 text-midgrey">From early concepts to production-ready design systems — we craft interfaces that look great and convert better.</p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="globe-2" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Website &amp; App Interfaces</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Complete UI design for marketing sites, landing pages, ecommerce stores, and mobile apps.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="layout-dashboard" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Dashboard &amp; Admin Panels</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Data-rich interfaces with clear information hierarchy, filters, and actionable insights.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="smartphone" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Mobile App Screens</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">iOS and Android screen design with platform-specific patterns and gesture optimization.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="megaphone" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Landing Pages</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Conversion-focused landing page design with clear CTAs, social proof, and flow.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="component" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Design Systems</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Reusable component libraries, design tokens, color systems, and typography scales.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="git-branch" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">User Flows &amp; Prototypes</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Clickable prototypes, user journey maps, and interaction design for stakeholder buy-in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-softgrey">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">How We Work</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">From Research To Handoff</h2>
+        </div>
+        <div class="mt-12 grid gap-4 md:grid-cols-4">
+          <div class="step-card rounded-2xl border border-bordergrey bg-white p-6 shadow-e1"><p class="text-[28px] font-black text-green">01</p><h3 class="mt-3 font-black">Research &amp; User Stories</h3><p class="mt-2 text-[14px] leading-6 text-midgrey">Understand users, goals, competitors, and define the product requirements.</p></div>
+          <div class="step-card rounded-2xl border border-bordergrey bg-white p-6 shadow-e1"><p class="text-[28px] font-black text-green">02</p><h3 class="mt-3 font-black">Wireframing &amp; Information Architecture</h3><p class="mt-2 text-[14px] leading-6 text-midgrey">Structure content, plan layouts, and create low-fidelity wireframes.</p></div>
+          <div class="step-card rounded-2xl border border-bordergrey bg-white p-6 shadow-e1"><p class="text-[28px] font-black text-green">03</p><h3 class="mt-3 font-black">Visual Design &amp; Brand Alignment</h3><p class="mt-2 text-[14px] leading-6 text-midgrey">High-fidelity mockups, color, typography, and brand consistency.</p></div>
+          <div class="step-card rounded-2xl border border-bordergrey bg-navy p-6 text-white shadow-e2"><p class="text-[28px] font-black text-green">04</p><h3 class="mt-3 font-black">Prototyping, Handoff &amp; QA</h3><p class="mt-2 text-[14px] leading-6 text-white/65">Interactive prototypes, developer handoff, and design QA during build.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+          <div>
+            <span class="section-label">Tech Stack</span>
+            <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Industry-Standard Design Tools</h2>
+            <p class="mt-5 text-[16px] leading-8 text-midgrey">We use professional design tools for collaboration, prototyping, and seamless developer handoff.</p>
+          </div>
+          <div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="figma" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Figma</p><p class="text-[12px] text-midgrey">Primary design tool</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="pen-tool" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Adobe XD</p><p class="text-[12px] text-midgrey">Alternative design tool</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="icons" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Lucide</p><p class="text-[12px] text-midgrey">Icon library</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="palette" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Tailwind CSS</p><p class="text-[12px] text-midgrey">Design token alignment</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="type" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Google Fonts</p><p class="text-[12px] text-midgrey">Typography selection</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="grid" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Design tokens</p><p class="text-[12px] text-midgrey">Consistent design system</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy text-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 text-center md:px-8 md:py-28">
+        <span class="section-label bg-white/5">Ready For A Fresh Design?</span>
+        <h2 class="mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Let Us Design Your Product</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-[16px] leading-8 text-white/65">Tell us about your product and audience — we will create a design that users love and that drives conversions.</p>
+        <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="index.php#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-green px-7 py-4 text-[15px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+            Design your product
+            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-white">
+    <div class="mx-auto grid max-w-[1240px] gap-8 px-5 py-12 md:grid-cols-[1.2fr_.8fr_.8fr] md:px-8">
+      <div>
+        <img src="assets/isoftro-logo-full.png" alt="iSoftro Solutions" class="h-14 w-auto rounded-xl bg-white p-2" />
+        <p class="mt-5 max-w-md text-[14px] leading-7 text-white/62">Premium software agency and product studio building websites, mobile apps, ERP, SaaS, AI automation, and custom business systems.</p>
+      </div>
+      <div>
+        <h3 class="text-[14px] font-black uppercase tracking-[.12em] text-white">Explore</h3>
+        <div class="mt-4 grid gap-2 text-[14px] text-white/62">
+          <a href="services.php" class="hover:text-green">Services</a>
+          <a href="index.php#brands" class="hover:text-green">Portfolio</a>
+          <a href="pricing.php" class="hover:text-green">Pricing</a>
+          <a href="ecommerce-app.php" class="hover:text-green">Ecommerce App</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-[14px] font-black uppercase tracking-[.12em] text-white">Contact</h3>
+        <div class="mt-4 grid gap-2 text-[14px] text-white/62">
+          <span>hello@isoftro.com</span>
+          <span>Nepal</span>
+          <span>Web + Mobile + AI Expertise</span>
+          <a href="https://www.facebook.com/isoftro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-green"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-5 py-5 text-center text-[12px] text-white/45">Copyright 2026 iSoftro Solutions. All rights reserved.</div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuToggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

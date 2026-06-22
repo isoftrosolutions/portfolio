@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Website Development Agency | iSoftro Solutions</title>
+  <meta name="description" content="iSoftro Solutions builds fast, conversion-focused websites for service businesses, ecommerce brands, product launches, and growing companies in Nepal and beyond." />
+  <meta name="theme-color" content="#0B1E3D" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://isoftro.com/website-development.html" />
+  <meta property="og:url" content="https://isoftro.com/website-development.html" />
+  <meta property="og:site_name" content="iSoftro Solutions" />
+  <meta property="og:title" content="Premium Website Development For Brands That Mean Business" />
+  <meta property="og:description" content="Fast, conversion-focused websites built for service businesses, ecommerce brands, product launches, and growing companies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://isoftro.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="iSoftro Solutions - Website Development Agency" />
+  <meta name="twitter:description" content="Fast, conversion-focused websites for service businesses, ecommerce brands, and product launches." />
+  <meta name="twitter:image" content="https://isoftro.com/assets/og-image.png" />
+
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Website Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "iSoftro Solutions",
+      "url": "https://isoftro.com/"
+    },
+    "description": "Fast, premium websites for service businesses, ecommerce brands, product launches, and corporate portals.",
+    "areaServed": ["NP", "IN", "International"]
+  }]
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: { DEFAULT: '#1DB954', dark: '#18A348' },
+            navy: '#0B1E3D',
+            ink: '#0F172A',
+            softgrey: '#F1F5F9',
+            midgrey: '#64748B',
+            bordergrey: '#E2E8F0',
+            signal: '#2563EB',
+            teal: '#0EA5E9'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'Segoe UI', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            e1: '0 1px 3px rgba(0,0,0,0.08)',
+            e2: '0 4px 16px rgba(0,0,0,0.10)',
+            e3: '0 8px 32px rgba(0,0,0,0.12)',
+            e4: '0 16px 48px rgba(0,0,0,0.18)',
+            glow: '0 4px 20px rgba(29,185,84,0.30)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { font-family: 'Poppins', 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #0F172A; }
+    body { overflow-x: hidden; }
+    .glass { background: rgba(255,255,255,.78); border: 1px solid rgba(226,232,240,.8); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(29,185,84,.18), transparent 32%),
+        radial-gradient(circle at 15% 70%, rgba(14,165,233,.15), transparent 30%);
+      background-size: 72px 72px, 72px 72px, auto, auto;
+    }
+    .text-gradient { background: linear-gradient(135deg, #1DB954, #0EA5E9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .orb { position:absolute; border-radius:9999px; filter: blur(80px); pointer-events:none; }
+    .section-label { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(29,185,84,.22); background:rgba(29,185,84,.07); color:#1DB954; padding:.42rem .9rem; border-radius:9999px; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .service-card, .project-card, .price-card { transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+    .service-card:hover, .project-card:hover, .price-card:hover { transform: translateY(-5px); box-shadow: 0 12px 34px rgba(15,23,42,.12); border-color: rgba(29,185,84,.36); }
+    .icon-box { display:grid; place-items:center; width:48px; height:48px; border-radius:14px; background:rgba(29,185,84,.1); color:#1DB954; }
+    .portfolio-logo { max-height: 42px; width:auto; object-fit:contain; }
+    .tech-badge { display:inline-flex; align-items:center; gap:.5rem; border:1px solid #E2E8F0; background:#F8FAFC; padding:.5rem 1rem; border-radius:9999px; font-size:13px; font-weight:600; color:#0F172A; transition: border-color .2s, background .2s; }
+    .tech-badge:hover { border-color: rgba(29,185,84,.36); background: rgba(29,185,84,.05); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-white text-ink antialiased selection:bg-green/20">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2 focus:ring-2 focus:ring-green">Skip to content</a>
+
+  <header class="fixed left-0 right-0 top-0 z-50">
+    <div class="mx-auto max-w-[1240px] px-4 pt-4">
+      <nav class="glass flex items-center justify-between rounded-2xl px-4 py-3 shadow-e2 md:px-6">
+        <a href="index.php" class="flex items-center" aria-label="iSoftro Solutions home">
+          <img src="assets/isoftro-logo.png" alt="iSoftro Solutions" class="h-10 w-auto" />
+        </a>
+        <div class="hidden items-center gap-1 text-[13px] font-semibold text-ink/70 lg:flex">
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="ecommerce-app.php" class="hidden rounded-full border border-green/30 px-4 py-2 text-[13px] font-semibold text-green transition hover:bg-green/5 sm:inline-flex">Ecommerce App</a>
+          <a href="index.php#contact" class="inline-flex items-center gap-2 rounded-full bg-green px-5 py-2.5 text-[13px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+            Start a Project
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <button id="menuToggle" class="grid h-10 w-10 place-items-center rounded-xl border border-bordergrey bg-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="glass mt-2 hidden rounded-2xl p-3 text-[15px] font-semibold text-ink/75 lg:hidden">
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#contact">Contact</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="ecommerce-app.php">Ecommerce App</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-grid relative isolate overflow-hidden bg-navy pt-32 text-white md:pt-40">
+      <div class="orb -right-32 top-12 h-96 w-96 bg-green/20"></div>
+      <div class="orb -left-32 bottom-12 h-80 w-80 bg-teal/20"></div>
+      <div class="mx-auto max-w-[1240px] px-5 pb-20 pt-6 md:px-8 md:pb-28 md:pt-10">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 rounded-full border border-green/30 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-[.14em] text-green">
+            <i data-lucide="globe-2" class="h-4 w-4"></i>
+            Website Development
+          </div>
+          <h1 class="mt-6 text-[clamp(2.55rem,6vw,5rem)] font-black uppercase leading-[.96] tracking-tight">
+            Premium Website Development <span class="text-gradient block">For Brands That Mean Business.</span>
+          </h1>
+          <p class="mx-auto mt-6 max-w-3xl text-[17px] leading-8 text-white/72 md:text-[19px]">
+            Fast, conversion-focused websites built for service businesses, ecommerce brands, product launches, and growing companies.
+          </p>
+          <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="index.php#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-green px-7 py-4 text-[15px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+              Start Your Website
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <a href="index.php#brands" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[15px] font-bold text-white transition hover:bg-white/10">
+              View Our Work
+            </a>
+          </div>
+          <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-[13px] font-medium text-white/70">
+            <span class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-green"></i> SEO-optimised</span>
+            <span class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-green"></i> Mobile-first responsive</span>
+            <span class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-green"></i> Performance-tuned</span>
+            <span class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-green"></i> CMS-ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-we-build" class="bg-softgrey">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">What We Build</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Websites Engineered For Every Purpose</h2>
+          <p class="mt-4 text-[16px] leading-7 text-midgrey">From brand homepages to full ecommerce stores, we build the right site for your business goals.</p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2">
+          <article class="service-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="building-2" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Business & Brand Websites</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Premium company sites that communicate authority and convert visitors into leads. Perfect for service businesses, agencies, consulting firms, and established brands.</p>
+            <ul class="mt-4 space-y-2 text-[13px] font-medium text-midgrey">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Company & about pages</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Service/capability showcase</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Blog & resource sections</li>
+            </ul>
+          </article>
+          <article class="service-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="shopping-cart" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Ecommerce Stores</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Full online stores with product catalogs, cart, checkout, payment gateway integration (eSewa, Khalti, cards), order tracking, and admin dashboards.</p>
+            <ul class="mt-4 space-y-2 text-[13px] font-medium text-midgrey">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Product management</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Payment & shipping</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Inventory & orders</li>
+            </ul>
+          </article>
+          <article class="service-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="briefcase" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Service & Portfolio Sites</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Clean, trust-building websites for freelancers, consultants, creative studios, and local businesses. Lead-capture forms, case studies, testimonials, and gallery sections included.</p>
+            <ul class="mt-4 space-y-2 text-[13px] font-medium text-midgrey">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Portfolio / work showcase</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Lead capture forms</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Testimonial integration</li>
+            </ul>
+          </article>
+          <article class="service-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="rocket" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Product Launch & Corporate Portals</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">High-impact launch pages, waitlist/campaign sites, investor portals, and internal corporate dashboards with secure access and role management.</p>
+            <ul class="mt-4 space-y-2 text-[13px] font-medium text-midgrey">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Campaign & landing pages</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Secure portal areas</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-green"></i> Analytics & reporting</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-white">
+      <div class="orb -left-32 top-20 h-80 w-80 bg-green/10"></div>
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">How We Work</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">A Transparent 4-Step Process</h2>
+          <p class="mt-4 text-[16px] leading-7 text-midgrey">Every website follows a proven pipeline: discover, design, develop, deploy. No surprises, no black boxes.</p>
+        </div>
+        <div class="mt-12 grid gap-4 md:grid-cols-4">
+          <div class="rounded-2xl border border-bordergrey bg-white p-6 shadow-e1">
+            <p class="text-[28px] font-black text-green">01</p>
+            <div class="mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green/10 text-green">
+              <i data-lucide="search" class="h-5 w-5"></i>
+            </div>
+            <h3 class="mt-4 font-black">Discovery & Strategy</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">We define your business goals, target audience, sitemap structure, and content plan before writing a single line of code.</p>
+          </div>
+          <div class="rounded-2xl border border-bordergrey bg-white p-6 shadow-e1">
+            <p class="text-[28px] font-black text-green">02</p>
+            <div class="mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green/10 text-green">
+              <i data-lucide="pen-tool" class="h-5 w-5"></i>
+            </div>
+            <h3 class="mt-4 font-black">Design</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Wireframes and high-fidelity UI mockups designed for brand alignment, conversion flow, and client feedback before build.</p>
+          </div>
+          <div class="rounded-2xl border border-bordergrey bg-white p-6 shadow-e1">
+            <p class="text-[28px] font-black text-green">03</p>
+            <div class="mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green/10 text-green">
+              <i data-lucide="code-2" class="h-5 w-5"></i>
+            </div>
+            <h3 class="mt-4 font-black">Development</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Responsive HTML/CSS/JS or custom CMS integration, with performance optimisation, SEO markup, and cross-device testing.</p>
+          </div>
+          <div class="rounded-2xl border border-bordergrey bg-navy p-6 text-white shadow-e2">
+            <p class="text-[28px] font-black text-green">04</p>
+            <div class="mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green/10 text-green">
+              <i data-lucide="rocket" class="h-5 w-5"></i>
+            </div>
+            <h3 class="mt-4 font-black">Launch & Support</h3>
+            <p class="mt-2 text-[14px] leading-6 text-white/65">Hosting setup, domain configuration, pre-launch QA, deployment, and post-launch maintenance to keep your site running smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-softgrey">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">Tech Stack</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Modern Tools, Solid Foundations</h2>
+          <p class="mt-4 text-[16px] leading-7 text-midgrey">We choose the right technology for each project — from lightweight static sites to full CMS-powered platforms.</p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <h3 class="flex items-center gap-2 text-[17px] font-black"><i data-lucide="monitor" class="h-5 w-5 text-green"></i> Frontend</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tech-badge"><i data-lucide="code-2" class="h-4 w-4 text-green"></i> HTML5</span>
+              <span class="tech-badge"><i data-lucide="code-2" class="h-4 w-4 text-green"></i> CSS3</span>
+              <span class="tech-badge"><i data-lucide="code-2" class="h-4 w-4 text-green"></i> JavaScript</span>
+              <span class="tech-badge"><i data-lucide="palette" class="h-4 w-4 text-green"></i> Tailwind CSS</span>
+              <span class="tech-badge"><i data-lucide="blocks" class="h-4 w-4 text-green"></i> React (when needed)</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <h3 class="flex items-center gap-2 text-[17px] font-black"><i data-lucide="server" class="h-5 w-5 text-green"></i> Backend</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tech-badge"><i data-lucide="server" class="h-4 w-4 text-green"></i> PHP</span>
+              <span class="tech-badge"><i data-lucide="database" class="h-4 w-4 text-green"></i> MySQL / SQLite</span>
+              <span class="tech-badge"><i data-lucide="server" class="h-4 w-4 text-green"></i> Node.js (when needed)</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <h3 class="flex items-center gap-2 text-[17px] font-black"><i data-lucide="layout-dashboard" class="h-5 w-5 text-green"></i> CMS</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tech-badge"><i data-lucide="layout-dashboard" class="h-4 w-4 text-green"></i> WordPress</span>
+              <span class="tech-badge"><i data-lucide="code-2" class="h-4 w-4 text-green"></i> Custom PHP CMS</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <h3 class="flex items-center gap-2 text-[17px] font-black"><i data-lucide="wrench" class="h-5 w-5 text-green"></i> Tools</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tech-badge"><i data-lucide="git-branch" class="h-4 w-4 text-green"></i> Git</span>
+              <span class="tech-badge"><i data-lucide="terminal" class="h-4 w-4 text-green"></i> VSCode</span>
+              <span class="tech-badge"><i data-lucide="pen-tool" class="h-4 w-4 text-green"></i> Figma</span>
+              <span class="tech-badge"><i data-lucide="smartphone" class="h-4 w-4 text-green"></i> Chrome DevTools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-navy text-white">
+      <div class="orb -right-32 top-20 h-80 w-80 bg-green/15"></div>
+      <div class="mx-auto grid max-w-[1240px] items-center gap-14 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[1.1fr_.9fr]">
+        <div>
+          <span class="section-label bg-white/5">Our Approach</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">How We Bring Your Vision To Life</h2>
+          <p class="mt-5 text-[16px] leading-8 text-white/65">We believe the best websites come from close collaboration, not black-box delivery. Here is how we work with you from day one.</p>
+          <div class="mt-8 space-y-5">
+            <div class="flex gap-4">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green/15 text-green"><i data-lucide="users" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="text-[16px] font-black">Close Collaboration</h3>
+                <p class="mt-1 text-[14px] leading-6 text-white/62">You work directly with the team building your site. No account managers, no runaround — clear communication from start to finish.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green/15 text-green"><i data-lucide="messages-square" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="text-[16px] font-black">Transparent Communication</h3>
+                <p class="mt-1 text-[14px] leading-6 text-white/62">Weekly progress updates, shared task boards, and direct messaging. You always know exactly where your project stands.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green/15 text-green"><i data-lucide="refresh-cw" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="text-[16px] font-black">Iterative Feedback</h3>
+                <p class="mt-1 text-[14px] leading-6 text-white/62">We share work early and often. Your feedback shapes every round, so the final site feels exactly right — not a surprise at launch.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green/15 text-green"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="text-[16px] font-black">No Black-Box Delivery</h3>
+                <p class="mt-1 text-[14px] leading-6 text-white/62">Everything we build is documented, accessible, and explained. You own the code, the assets, and the full understanding of your site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-4 backdrop-blur">
+          <div class="rounded-[1.5rem] bg-white p-6 text-ink shadow-e3">
+            <div class="flex items-center gap-3 border-b border-bordergrey pb-4">
+              <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-green/10 text-green"><i data-lucide="globe-2" class="h-5 w-5"></i></span>
+              <div>
+                <p class="text-[12px] font-bold uppercase tracking-[.12em] text-green">What You Get</p>
+                <p class="text-[15px] font-black">Every Website Includes</p>
+              </div>
+            </div>
+            <ul class="mt-4 space-y-3 text-[14px] font-medium">
+              <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-green/10 text-green"><i data-lucide="check" class="h-4 w-4"></i></span> Mobile-first responsive design</li>
+              <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-green/10 text-green"><i data-lucide="check" class="h-4 w-4"></i></span> SEO-optimised structure & meta</li>
+              <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-green/10 text-green"><i data-lucide="check" class="h-4 w-4"></i></span> Performance & speed tuning</li>
+              <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-green/10 text-green"><i data-lucide="check" class="h-4 w-4"></i></span> CMS-ready (WordPress or custom)</li>
+              <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-green/10 text-green"><i data-lucide="check" class="h-4 w-4"></i></span> Analytics & tracking setup</li>
+              <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-green/10 text-green"><i data-lucide="check" class="h-4 w-4"></i></span> Post-launch support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">What Clients Say</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Trusted By Businesses Like Yours</h2>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <article class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <div class="flex gap-1 text-green">
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+            <p class="mt-4 text-[14px] leading-7 text-midgrey">"iSoftro rebuilt our entire ecommerce site. The new design doubled our mobile conversion rate in the first month. Professional team, clean code, fast delivery."</p>
+            <div class="mt-5 flex items-center gap-3 border-t border-bordergrey pt-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green/10 text-[14px] font-black text-green">RP</div>
+              <div>
+                <p class="text-[13px] font-bold">Rajesh P.</p>
+                <p class="text-[12px] text-midgrey">Ecommerce Store Owner</p>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <div class="flex gap-1 text-green">
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+            <p class="mt-4 text-[14px] leading-7 text-midgrey">"We needed a corporate portal for our cooperative members. iSoftro delivered a clean, secure platform with accounting dashboards and member management."</p>
+            <div class="mt-5 flex items-center gap-3 border-t border-bordergrey pt-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green/10 text-[14px] font-black text-green">SK</div>
+              <div>
+                <p class="text-[13px] font-bold">Sita K.</p>
+                <p class="text-[12px] text-midgrey">Cooperative Director</p>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <div class="flex gap-1 text-green">
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+            <p class="mt-4 text-[14px] leading-7 text-midgrey">"The team built our product launch site in under two weeks. Great communication, iterative feedback, and the design captured our brand perfectly."</p>
+            <div class="mt-5 flex items-center gap-3 border-t border-bordergrey pt-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green/10 text-[14px] font-black text-green">AM</div>
+              <div>
+                <p class="text-[13px] font-bold">Anish M.</p>
+                <p class="text-[12px] text-midgrey">Startup Founder</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-green/5">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 text-center md:px-8 md:py-28">
+        <span class="section-label">Start Building</span>
+        <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Ready To Build Your Website?</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-[16px] leading-7 text-midgrey">Let us talk about your project. Share your ideas, and we will map out the right website strategy — with clear scope, timeline, and pricing.</p>
+        <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="index.php#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-green px-7 py-4 text-[15px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+            Start Your Website
+            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+          </a>
+          <a href="index.php" class="inline-flex items-center justify-center gap-2 rounded-full border border-bordergrey px-7 py-4 text-[15px] font-bold text-ink transition hover:bg-softgrey">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-white">
+    <div class="mx-auto grid max-w-[1240px] gap-8 px-5 py-12 md:grid-cols-[1.2fr_.8fr_.8fr] md:px-8">
+      <div>
+        <img src="assets/isoftro-logo-full.png" alt="iSoftro Solutions" class="h-14 w-auto rounded-xl bg-white p-2" />
+        <p class="mt-5 max-w-md text-[14px] leading-7 text-white/62">Premium software agency and product studio building websites, mobile apps, ERP, SaaS, AI automation, and custom business systems.</p>
+      </div>
+      <div>
+        <h3 class="text-[14px] font-black uppercase tracking-[.12em] text-white">Explore</h3>
+        <div class="mt-4 grid gap-2 text-[14px] text-white/62">
+          <a href="services.php" class="hover:text-green">Services</a>
+          <a href="index.php#brands" class="hover:text-green">Portfolio</a>
+          <a href="pricing.php" class="hover:text-green">Pricing</a>
+          <a href="ecommerce-app.php" class="hover:text-green">Ecommerce App</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-[14px] font-black uppercase tracking-[.12em] text-white">Contact</h3>
+        <div class="mt-4 grid gap-2 text-[14px] text-white/62">
+          <span>hello@isoftro.com</span>
+          <span>Nepal</span>
+          <span>Web + Mobile + AI Expertise</span>
+          <a href="https://www.facebook.com/isoftro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-green"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-5 py-5 text-center text-[12px] text-white/45">Copyright 2026 iSoftro Solutions. All rights reserved.</div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuToggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

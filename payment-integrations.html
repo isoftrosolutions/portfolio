@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Gateway Integration | iSoftro Solutions</title>
+  <meta name="description" content="iSoftro Solutions integrates eSewa, Khalti, cards, wallets, order tracking, invoices, and secure transaction flows for websites and apps in Nepal." />
+  <meta name="theme-color" content="#0B1E3D" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://isoftro.com/payment-integrations.html" />
+  <meta property="og:url" content="https://isoftro.com/payment-integrations.html" />
+  <meta property="og:site_name" content="iSoftro Solutions" />
+  <meta property="og:title" content="Payment Gateway Integration — Secure, Local & Global Transactions | iSoftro" />
+  <meta property="og:description" content="eSewa, Khalti, cards, wallets, order tracking, invoices, and secure transaction flows for your website or app." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://isoftro.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Payment Gateway Integration | iSoftro Solutions" />
+  <meta name="twitter:description" content="eSewa, Khalti, cards, wallets, order tracking, invoices, and secure transaction flows for your website or app." />
+  <meta name="twitter:image" content="https://isoftro.com/assets/og-image.png" />
+
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Payment Gateway Integration",
+    "provider": { "@type": "Organization", "name": "iSoftro Solutions", "url": "https://isoftro.com/" },
+    "description": "eSewa, Khalti, cards, wallets, order tracking, invoices, and secure transaction flows for websites and apps."
+  }]
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: { DEFAULT: '#1DB954', dark: '#18A348' },
+            navy: '#0B1E3D',
+            ink: '#0F172A',
+            softgrey: '#F1F5F9',
+            midgrey: '#64748B',
+            bordergrey: '#E2E8F0',
+            signal: '#2563EB',
+            teal: '#0EA5E9'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'Inter', 'Segoe UI', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            e1: '0 1px 3px rgba(0,0,0,0.08)',
+            e2: '0 4px 16px rgba(0,0,0,0.10)',
+            e3: '0 8px 32px rgba(0,0,0,0.12)',
+            e4: '0 16px 48px rgba(0,0,0,0.18)',
+            glow: '0 4px 20px rgba(29,185,84,0.30)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { font-family: 'Poppins', 'Inter', 'Segoe UI', -apple-system, sans-serif; color: #0F172A; }
+    body { overflow-x: hidden; }
+    .glass { background: rgba(255,255,255,.78); border: 1px solid rgba(226,232,240,.8); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(29,185,84,.18), transparent 32%),
+        radial-gradient(circle at 15% 70%, rgba(14,165,233,.15), transparent 30%);
+      background-size: 72px 72px, 72px 72px, auto, auto;
+    }
+    .text-gradient { background: linear-gradient(135deg, #1DB954, #0EA5E9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .orb { position:absolute; border-radius:9999px; filter: blur(80px); pointer-events:none; }
+    .section-label { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(29,185,84,.22); background:rgba(29,185,84,.07); color:#1DB954; padding:.42rem .9rem; border-radius:9999px; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .feature-card { transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 12px 34px rgba(15,23,42,.12); border-color: rgba(29,185,84,.36); }
+    .step-card { transition: transform .24s ease, box-shadow .24s ease; }
+    .step-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(15,23,42,.10); }
+    .icon-box { display:grid; place-items:center; width:48px; height:48px; border-radius:14px; background:rgba(29,185,84,.1); color:#1DB954; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-white text-ink antialiased selection:bg-green/20">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2 focus:ring-2 focus:ring-green">Skip to content</a>
+
+  <header class="fixed left-0 right-0 top-0 z-50">
+    <div class="mx-auto max-w-[1240px] px-4 pt-4">
+      <nav class="glass flex items-center justify-between rounded-2xl px-4 py-3 shadow-e2 md:px-6">
+        <a href="index.php" class="flex items-center" aria-label="iSoftro Solutions home">
+          <img src="assets/isoftro-logo.png" alt="iSoftro Solutions" class="h-10 w-auto" />
+        </a>
+        <div class="hidden items-center gap-1 text-[13px] font-semibold text-ink/70 lg:flex">
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="ecommerce-app.php" class="hidden rounded-full border border-green/30 px-4 py-2 text-[13px] font-semibold text-green transition hover:bg-green/5 sm:inline-flex">Ecommerce App</a>
+          <a href="index.php#contact" class="inline-flex items-center gap-2 rounded-full bg-green px-5 py-2.5 text-[13px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+            Start a Project
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <button id="menuToggle" class="grid h-10 w-10 place-items-center rounded-xl border border-bordergrey bg-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="glass mt-2 hidden rounded-2xl p-3 text-[15px] font-semibold text-ink/75 lg:hidden">
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="ecommerce-app.php">Ecommerce App</a>
+          <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-grid relative isolate overflow-hidden bg-navy pt-32 text-white md:pt-40">
+      <div class="orb -right-32 top-12 h-96 w-96 bg-green/20"></div>
+      <div class="orb -left-32 bottom-12 h-80 w-80 bg-teal/20"></div>
+      <div class="mx-auto max-w-[1240px] px-5 pb-24 pt-10 md:px-8 md:pb-32 md:pt-16">
+        <div class="mx-auto max-w-4xl text-center">
+          <div class="inline-flex items-center gap-2 rounded-full border border-green/30 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-[.14em] text-green">
+            <i data-lucide="credit-card" class="h-4 w-4"></i>
+            Payment Gateway Integration
+          </div>
+          <h1 class="mt-6 text-[clamp(2.55rem,6vw,5.35rem)] font-black uppercase leading-[.96] tracking-tight">Payment Gateway Integration <span class="text-gradient">— Secure, Local &amp; Global Transactions</span></h1>
+          <p class="mx-auto mt-6 max-w-3xl text-[17px] leading-8 text-white/72 md:text-[19px]">eSewa, Khalti, cards, wallets, order tracking, invoices, and secure transaction flows for your website or app.</p>
+          <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="index.php#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-green px-7 py-4 text-[15px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+              Integrate payments
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <a href="index.php#brands" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[15px] font-bold text-white transition hover:bg-white/10">
+              View portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-bordergrey bg-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">What We Integrate</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Every Payment Method Your Customers Need</h2>
+          <p class="mt-4 text-[16px] leading-7 text-midgrey">Nepal's most popular payment gateways plus international card processing — all integrated securely.</p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="wallet" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">eSewa Payment Gateway</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Nepal's leading digital wallet — seamless checkout, instant confirmations, and refund support.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="landmark" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Khalti Digital Wallet</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Fast, reliable payments with Khalti — including one-tap checkout and transaction history.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="credit-card" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Credit / Debit Cards</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Visa, Mastercard, and international card payments via secure third-party processors.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="building" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Connect IPS &amp; Banking</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Direct bank transfers, Connect IPS, and other Nepal banking payment methods.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="smartphone" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Mobile Wallets</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Additional wallet options including Fonepay, IMEPay, and other popular Nepali wallets.</p>
+          </div>
+          <div class="feature-card rounded-2xl border border-bordergrey bg-white p-7 shadow-e1">
+            <span class="icon-box"><i data-lucide="file-text" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 text-[19px] font-black">Invoice &amp; Receipt Generation</h3>
+            <p class="mt-2 text-[14px] leading-6 text-midgrey">Automated PDF invoices, email receipts, tax-compliant billing, and payment confirmations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-softgrey">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-label">How We Work</span>
+          <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">From Sandbox To Live Transactions</h2>
+        </div>
+        <div class="mt-12 grid gap-4 md:grid-cols-4">
+          <div class="step-card rounded-2xl border border-bordergrey bg-white p-6 shadow-e1"><p class="text-[28px] font-black text-green">01</p><h3 class="mt-3 font-black">Gateway Selection &amp; Setup</h3><p class="mt-2 text-[14px] leading-6 text-midgrey">Choose the right gateways for your audience and register merchant accounts.</p></div>
+          <div class="step-card rounded-2xl border border-bordergrey bg-white p-6 shadow-e1"><p class="text-[28px] font-black text-green">02</p><h3 class="mt-3 font-black">Sandbox Testing &amp; Webhook Config</h3><p class="mt-2 text-[14px] leading-6 text-midgrey">Test all payment flows, webhook endpoints, and error scenarios in sandbox.</p></div>
+          <div class="step-card rounded-2xl border border-bordergrey bg-white p-6 shadow-e1"><p class="text-[28px] font-black text-green">03</p><h3 class="mt-3 font-black">Security Audit &amp; Compliance</h3><p class="mt-2 text-[14px] leading-6 text-midgrey">SSL/TLS, PCI guidelines, data encryption, and secure key management.</p></div>
+          <div class="step-card rounded-2xl border border-bordergrey bg-navy p-6 text-white shadow-e2"><p class="text-[28px] font-black text-green">04</p><h3 class="mt-3 font-black">Production Deployment &amp; Monitoring</h3><p class="mt-2 text-[14px] leading-6 text-white/65">Go live, monitor transactions, and handle edge cases proactively.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+          <div>
+            <span class="section-label">Tech Stack</span>
+            <h2 class="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Secure, Compliant, Battle-Tested</h2>
+            <p class="mt-5 text-[16px] leading-8 text-midgrey">Every integration follows security best practices and handles edge cases like failures, refunds, and disputes.</p>
+          </div>
+          <div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="wallet" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">eSewa API</p><p class="text-[12px] text-midgrey">Nepal wallet payments</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="landmark" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">Khalti API</p><p class="text-[12px] text-midgrey">Digital wallet payments</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="code-2" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">PHP cURL</p><p class="text-[12px] text-midgrey">Server-to-server requests</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="shield" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">SSL / TLS</p><p class="text-[12px] text-midgrey">Encrypted connections</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="database" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">MySQL</p><p class="text-[12px] text-midgrey">Transaction database</p></div></div>
+              <div class="rounded-2xl border border-bordergrey bg-softgrey p-5 flex items-center gap-4"><i data-lucide="webhook" class="h-7 w-7 shrink-0 text-green"></i><div><p class="font-black text-[15px]">JSON Webhooks</p><p class="text-[12px] text-midgrey">Real-time event callbacks</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy text-white">
+      <div class="mx-auto max-w-[1240px] px-5 py-20 text-center md:px-8 md:py-28">
+        <span class="section-label bg-white/5">Ready To Start Taking Payments?</span>
+        <h2 class="mt-6 text-[clamp(2rem,4vw,3.2rem)] font-black uppercase leading-tight">Let Us Integrate Your Payment Gateway</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-[16px] leading-8 text-white/65">Tell us which gateways you need and we will set up secure, reliable payment processing for your website or app.</p>
+        <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="index.php#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-green px-7 py-4 text-[15px] font-bold text-white shadow-glow transition hover:bg-green-dark">
+            Integrate payments
+            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-white">
+    <div class="mx-auto grid max-w-[1240px] gap-8 px-5 py-12 md:grid-cols-[1.2fr_.8fr_.8fr] md:px-8">
+      <div>
+        <img src="assets/isoftro-logo-full.png" alt="iSoftro Solutions" class="h-14 w-auto rounded-xl bg-white p-2" />
+        <p class="mt-5 max-w-md text-[14px] leading-7 text-white/62">Premium software agency and product studio building websites, mobile apps, ERP, SaaS, AI automation, and custom business systems.</p>
+      </div>
+      <div>
+        <h3 class="text-[14px] font-black uppercase tracking-[.12em] text-white">Explore</h3>
+        <div class="mt-4 grid gap-2 text-[14px] text-white/62">
+          <a href="services.php" class="hover:text-green">Services</a>
+          <a href="index.php#brands" class="hover:text-green">Portfolio</a>
+          <a href="pricing.php" class="hover:text-green">Pricing</a>
+          <a href="ecommerce-app.php" class="hover:text-green">Ecommerce App</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-[14px] font-black uppercase tracking-[.12em] text-white">Contact</h3>
+        <div class="mt-4 grid gap-2 text-[14px] text-white/62">
+          <span>hello@isoftro.com</span>
+          <span>Nepal</span>
+          <span>Web + Mobile + AI Expertise</span>
+          <a href="https://www.facebook.com/isoftro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-green"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-5 py-5 text-center text-[12px] text-white/45">Copyright 2026 iSoftro Solutions. All rights reserved.</div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuToggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

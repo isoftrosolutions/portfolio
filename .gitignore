@@ -14,3 +14,23 @@ desktop.ini
 # Logs & temp
 *.log
 *.tmp
+
+# Local CMS database artifacts
+data/*.sqlite
+data/*.sqlite-journal
+data/*.db
+
+# Internal design notes (not for public repo)
+design-brief.md
+design-qa.md
+isoftro-website-prd.md
+
+# Random root images (not part of site assets)
+*.webp
+images.png
+
+# Random PDF downloads
+*.pdf
+
+# Uploaded assets (user-generated, not part of source)
+uploads/
