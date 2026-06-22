@@ -12,10 +12,10 @@ return [
         'connection' => getenv('DB_CONNECTION') ?: 'mysql',
         'sqlite_path' => __DIR__ . '/../data/cms.sqlite',
         'mysql' => [
-            'host' => getenv('DB_HOST') ?: '127.0.0.1',
+            'host' => getenv('DB_HOST') ?: 'localhost',
             'port' => getenv('DB_PORT') ?: '3306',
-            'database' => getenv('DB_DATABASE') ?: 'isoftro_website',
-            'username' => getenv('DB_USERNAME') ?: 'root',
+            'database' => getenv('DB_DATABASE') ?: 'ektamultp_isoftro',
+            'username' => getenv('DB_USERNAME') ?: 'ektamultp_isoftro_web_user',
             'password' => getenv('DB_PASSWORD') ?: '',
             'charset' => 'utf8mb4',
         ],
