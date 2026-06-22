@@ -32,5 +32,8 @@ images.png
 # Random PDF downloads
 *.pdf
 
+# Database dumps (contain sensitive data)
+db.sql
+
 # Uploaded assets (user-generated, not part of source)
 uploads/
