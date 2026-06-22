@@ -1,2 +1,12 @@
 DirectoryIndex index.php index.html
 
+# Block direct access to error log
+<Files "error.log">
+  Require all denied
+</Files>
+
+# PHP error logging configuration
+<IfModule mod_php.c>
+  php_flag log_errors on
+  php_value error_log "C:\Apache24\htdocs\my-website\error.log"
+</IfModule>
