@@ -16,7 +16,7 @@ return [
             'port' => getenv('DB_PORT') ?: '3306',
             'database' => getenv('DB_DATABASE') ?: 'ektamultp_isoftro',
             'username' => getenv('DB_USERNAME') ?: 'ektamultp_isoftro_web_user',
-            'password' => getenv('DB_PASSWORD') ?: '',
+            'password' => getenv('DB_PASSWORD') ?: 'me5K+%hyrC4JhAa&',
             'charset' => 'utf8mb4',
         ],
     ],
