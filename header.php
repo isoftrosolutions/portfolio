@@ -122,7 +122,7 @@ if (!isset($pageDescription)) $pageDescription = 'iSoftro Solutions builds premi
           <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php">Home</a>
           <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
           <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
-          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="portfolio.php">Portfolio</a>
           <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
           <a class="rounded-lg px-3 py-2 hover:bg-green/5 hover:text-green" href="#contact">Contact</a>
         </div>
@@ -141,7 +141,7 @@ if (!isset($pageDescription)) $pageDescription = 'iSoftro Solutions builds premi
         <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php">Home</a>
         <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="services.php">Services</a>
         <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="expertise.php">Expertise</a>
-        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="index.php#brands">Portfolio</a>
+        <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="portfolio.php">Portfolio</a>
         <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="pricing.php">Pricing</a>
         <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="#contact">Contact</a>
         <a class="block rounded-xl px-3 py-3 hover:bg-green/5 hover:text-green" href="ecommerce-app.php">Ecommerce App</a>

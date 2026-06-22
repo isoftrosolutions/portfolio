@@ -380,7 +380,7 @@ $brands = cms_all('brands', 'sort_order ASC, id DESC', 'is_published = 1');
         <div class="mt-4 grid gap-2 text-[14px] text-white/62">
           <a href="services.php" class="hover:text-green">Services</a>
           <a href="expertise.php" class="hover:text-green">Expertise</a>
-          <a href="index.php#brands" class="hover:text-green">Portfolio</a>
+          <a href="portfolio.php" class="hover:text-green">Portfolio</a>
           <a href="pricing.php" class="hover:text-green">Pricing</a>
           <a href="ecommerce-app.php" class="hover:text-green">Ecommerce App</a>
         </div>
