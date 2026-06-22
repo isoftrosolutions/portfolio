@@ -31,12 +31,7 @@ $projects = db()->query("SELECT * FROM projects WHERE is_published = 1 ORDER BY 
     <div class="mx-auto max-w-[1240px] px-5 py-20 md:px-8 md:py-28">
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <?php foreach ($projects as $p): ?>
-          <?php
-            $detailFile = __DIR__ . '/projects/' . e($p['slug']) . '.html';
-            $hasDetail = file_exists($detailFile);
-            $detailUrl = $hasDetail ? 'projects/' . e($p['slug']) . '.html' : null;
-          ?>
-          <article class="group rounded-2xl border border-border bg-white p-5 shadow-e1 transition-all duration-300 hover:-translate-y-1 hover:shadow-e3 active:scale-[0.98]">
+          <a href="project.php?slug=<?= e($p['slug']) ?>" class="group block rounded-2xl border border-border bg-white p-5 shadow-e1 transition-all duration-300 hover:-translate-y-1 hover:shadow-e3 active:scale-[0.98]">
             <div class="grid h-36 place-items-center rounded-xl bg-softgrey overflow-hidden">
               <?php if ($p['thumbnail']): ?>
                 <img src="<?= e($p['thumbnail']) ?>" alt="<?= e($p['title']) ?>" class="portfolio-logo max-h-16 w-auto rounded-md" />
@@ -55,18 +50,16 @@ $projects = db()->query("SELECT * FROM projects WHERE is_published = 1 ORDER BY 
               <p class="mt-2 text-[13px] leading-6 text-muted line-clamp-2"><?= e($p['short_desc']) ?></p>
             <?php endif; ?>
             <div class="mt-4 flex items-center gap-3">
-              <?php if ($detailUrl): ?>
-                <a href="<?= e($detailUrl) ?>" class="inline-flex items-center gap-1.5 text-[13px] font-bold text-green transition-all duration-200 hover:gap-2.5">
-                  View Project <i data-lucide="arrow-right" class="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"></i>
-                </a>
-              <?php endif; ?>
+              <span class="inline-flex items-center gap-1.5 text-[13px] font-bold text-green">
+                View Project <i data-lucide="arrow-right" class="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"></i>
+              </span>
               <?php if ($p['live_url']): ?>
-                <a href="<?= e($p['live_url']) ?>" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-[13px] font-bold text-muted hover:text-ink">
-                  <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
-                </a>
+                <span class="inline-flex items-center gap-1.5 text-[13px] font-bold text-muted" onclick="event.stopPropagation()">
+                  <a href="<?= e($p['live_url']) ?>" target="_blank" rel="noopener" class="hover:text-ink"><i data-lucide="external-link" class="h-3.5 w-3.5"></i></a>
+                </span>
               <?php endif; ?>
             </div>
-          </article>
+          </a>
         <?php endforeach; ?>
         <?php if (!$projects): ?>
           <div class="col-span-full py-16 text-center">
